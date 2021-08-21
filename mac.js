@@ -56,4 +56,22 @@ function calculateTotal(){
     
 };
 
+// ------cupon apply------
+document.getElementById('cupon-btn').addEventListener('click',function(){
+    const cuponField = document.getElementById('cupon-field');
+    const applyCupon = cuponField.value;
+    cuponField.value = '';
+
+    if(applyCupon == "stevekaku"){
+        const total = document.getElementById('total').innerText;
+        const discountFinalTotal = document.getElementById('final-total');
+        discountFinalTotal.innerText = parseInt(total*0.8);    
+    }
+    else{
+        const total = document.getElementById('total').innerText;
+        const discountFinalTotal = document.getElementById('final-total');
+        discountFinalTotal.innerText = parseInt(total);
+    }
+});
+
 
